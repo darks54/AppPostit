@@ -1,0 +1,17 @@
+<div class="list-group-item">
+  <span class="glyphicon glyphicon-remove-circle supprimer" aria-hidden="true"></span>
+  <h4 class="list-group-item-heading">Chapitre {{nbStep}}</h4>
+  Titre: <input type="text" class="title" value={{title}}><br>
+  {{#h}}
+    Heure: <input type="number" class="hour" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" value={{h}} min="0" max="23">
+  {{/h}}
+  {{^h}}
+    Heure: <input type="number" class="hour" onKeyUp="if(this.value>23){this.value='23';}else if(this.value<0){this.value='0';}" value="00" min="0" max="23">
+  {{/h}}
+  {{#m}}
+    Minute: <input type="number" class="minute" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" value={{m}} min="0" max="59">
+  {{/m}}
+  {{^m}}
+    Minute: <input type="number" class="minute" onKeyUp="if(this.value>59){this.value='59';}else if(this.value<0){this.value='0';}" value="00" min="0" max="59">
+  {{/m}}
+</div>

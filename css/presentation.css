@@ -1,0 +1,250 @@
+body{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #4E4E4E;
+  background-image: url("/img/wood.jpg");
+  overflow: hidden;
+}
+.navbar{
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+#timekeeper{
+  position: fixed;
+  background-color: #FFFFFF;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  width: 276px;
+  height: calc(100% - 276px);
+  background-image: url("/img/bg.png");}
+  #timekeeper #global{
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: center;
+    z-index: 110;
+    top: 0px;
+    left: 0px;
+    width: 100%;}
+    #timekeeper #global h2{
+      margin: 0px;}
+  #timekeeper #global input{
+    width: 100%;
+    color: #000000;
+    background-color: #FFEBEF;}
+  #timekeeper #steps{
+    overflow: auto;
+    width: 100%;
+    position: absolute;}
+    #timekeeper #steps .list-group-item{
+      color: #000000;
+      background-color: #A19F9E;
+      border-width: 5px;
+      border-color: #242323;
+      margin-bottom: 0px;}
+    #timekeeper #steps .list-group-item.active{
+      background-color: #FFEBEF;}
+    #timekeeper #steps .list-group-item.success{
+      color: #038C00;
+      border-color: #038C00;}
+    #timekeeper #steps .list-group-item.warning{
+      color: #FF6100;
+      border-color: #FF6100;}
+    #timekeeper #steps .list-group-item.danger{
+      color: #C40000;
+      border-color: #C40000;}
+    #timekeeper #steps .list-group-item.danger.active{
+      -webkit-animation-name: "clignote";
+      -moz-animation-name: "clignote";
+      -ms-animation-name: "clignote";
+      -o-animation-name: "clignote";
+      animation-name: "clignote";
+      -webkit-animation-duration: 2s;
+      -moz-animation-duration: 2s;
+      -ms-animation-duration: 2s;
+      -o-animation-duration: 2s;
+      animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -ms-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;}
+
+#qrcode{
+  position: fixed;
+  background-color: #FFFFFF;
+  z-index: 100;
+  top: calc(100% - 276px);
+  left: 0px;
+  width: 276px;
+  height: 276px;}
+  #qrcode img{
+    padding: 10px;
+  	cursor: pointer;}
+
+
+#tableau{
+  position: fixed;
+  width: calc(100% - 276px);;
+  height: 100%;
+  left: 276px;
+  max-height: 100%;}
+  #tableau .post_it{
+    z-index: 50;
+    background-image: url("/img/post-it.png");
+    width: 266px;
+    height: 266px;
+    -webkit-animation-name: "fadeInUp";
+    -moz-animation-name: "fadeInUp";
+    -ms-animation-name: "fadeInUp";
+    -o-animation-name: "fadeInUp";
+    animation-name: "fadeInUp";
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    -ms-animation-duration: 0.4s;
+    -o-animation-duration: 0.4s;
+    animation-duration: 0.4s;}
+    #tableau .post_it .supprimer{
+      position: relative;
+      top: 15px;
+      left: 85%;
+      z-index: 60;
+      width: 10px;
+      height: 10px;
+      cursor:pointer;}
+    #tableau .post_it .user{
+      position: relative;
+      top: 18px;
+      left: 10%;
+      z-index: 60;
+      width: auto;
+      height: 10px;
+      color: red;}
+    #tableau .post_it .message{
+      line-height: 20px;
+      font-size: 18px;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      bottom: 20px;
+      left: 10px;}
+
+#poubelle{
+  z-index: 1000;
+  position: absolute;
+  padding: 10px 10px 0 0;
+  right: 0px;}
+  #poubelle input{
+    background:url("/img/corbeille.png") top right no-repeat;
+    background-size: contain;
+  	width:50px;
+  	height: 50px;
+  	cursor: pointer;
+  	border:0;}
+
+.modal-backdrop.in{
+  opacity: .7;}
+.modal-body img{
+  margin: auto;}
+
+@-moz-keyframes  clignote {
+  0%{color: #C40000;
+    border-color: #C40000;}
+  50%{color: #FFFFFF;
+    border-color: #FFFFFF;}
+  100%{color: #C40000;
+    border-color: #C40000;}
+}
+
+@-webkit-keyframes clignote {
+  0%{color: #C40000;
+    border-color: #C40000;}
+  50%{color: #FFFFFF;
+    border-color: #FFFFFF;}
+  100%{color: #C40000;
+    border-color: #C40000;}
+}
+
+@-o-keyframes clignote {
+  0%{color: #C40000;
+    border-color: #C40000;}
+  50%{color: #FFFFFF;
+    border-color: #FFFFFF;}
+  100%{color: #C40000;
+    border-color: #C40000;}
+}
+
+@-ms-keyframes clignote {
+  0%{color: #C40000;
+    border-color: #C40000;}
+  50%{color: #FFFFFF;
+    border-color: #FFFFFF;}
+  100%{color: #C40000;
+    border-color: #C40000;}
+}
+
+@keyframes clignote {
+  0%{color: #C40000;
+    border-color: #C40000;}
+  50%{color: #FFFFFF;
+    border-color: #FFFFFF;}
+  100%{color: #C40000;
+    border-color: #C40000;}
+}
+
+
+@-moz-keyframes fadeInUp {
+  0% {
+    -moz-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@-o-keyframes fadeInUp {
+  0% {
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@-ms-keyframes fadeInUp {
+  0% {
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0; }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Super Chat temps réel !</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/presentation.css">
+    <script>
+      var lien = "{{&lien}}";
+    </script>
+  </head>
+  <body>
+
+    <div id="timekeeper">
+      <div id="global">
+        <h2></h2>
+        <div id="timer">
+          00 : 00 : 00
+        </div>
+        <input type="submit" value="suivant" id="go" class="btn">
+      </div>
+      <ul class="list-group" id="steps">
+      </ul>
+    </div>
+
+    <div id="qrcode"  data-toggle="modal" data-target="#myModal">
+    </div>
+
+    <div id="tableau">
+    </div>
+
+    <div id="poubelle">
+      <input type="submit" value="" id="corbeille">
+    </div>
+
+    <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body" id="modal-body">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="js/mustache.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/presentation.js"></script>
+  </body>
+</html>
